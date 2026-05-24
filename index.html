@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>زاد المؤمن</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <script>
+    (function () {
+      var storageKey = 'zada_almu_min_cache_reset_v1';
+      if (localStorage.getItem(storageKey)) {
+        return;
+      }
+
+      localStorage.setItem(storageKey, '1');
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (registrations) {
+          return Promise.all(registrations.map(function (registration) {
+            return registration.unregister();
+          }));
+        }).catch(function () {});
+      }
+
+      if ('caches' in window) {
+        caches.keys().then(function (keys) {
+          return Promise.all(keys.map(function (key) {
+            return caches.delete(key);
+          }));
+        }).catch(function () {});
+      }
+
+      var separator = window.location.href.indexOf('?') === -1 ? '?' : '&';
+      window.location.replace(window.location.href + separator + 'cache-bust=' + Date.now());
+    }());
+  </script>
+</head>
+<body class="home"> <!-- هنا أضفت كلاس home -->
+
+<button id="backToTop" title="العودة للأعلى">↑</button>
+
+
+
+  <header class="main-header">
+    <div class="container">
+      <h1>زاد المؤمن</h1>
+      <p>﴿ يَرۡفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُواْ مِنكُمۡ وَٱلَّذِينَ أُوتُواْ ٱلۡعِلۡمَ دَرَجَٰتٖ ﴾</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="checkout.html">الدفع</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+  </nav>
+
+
+
+
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <img src="assets/images/png.png" alt="رمز كتاب" class="hero-icon" />
+          <h2>مرحباً بك في <span class="highlight">زاد المؤمن</span></h2>
+          <p>في زاد المؤمن تلقى الأمان، علمٌ راسخ وزادٌ للإيمان</p>
+          <a href="#sections" class="btn hero-btn">ابدأ التصفح</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-link container" id="sections">
+      <a href="aqeedah.html">كتب العقيدة</a>
+      <a href="fiqh.html">كتب الفقه</a>
+      <a href="hadith.html">كتب الحديث</a>
+      <a href="tafsir.html">كتب التفسير</a>
+    </section>
+  </main>
+
+<!-- فيديو 1 -->
+<div class="video-container">
+  <video controls>
+    <source src="assets/videos/vid1.mp4" type="video/mp4">
+    متصفحك لا يدعم عرض الفيديو.
+  </video>
+</div>
+
+
+
+
+  <section class="hadith-section container">
+    <h2>لا تنسى</h2>
+    <blockquote>
+      <p><strong>قال رسول الله ﷺ:</strong> من يرد الله به خيراً يفقهه في الدين</p>
+    </blockquote>
+  </section>
+
+  <section class="best-sellers container">
+    <h2>الأكثر مبيعاً</h2>
+    <div class="books-list">
+      <div class="book-card">
+        <img src="assets/images/فتح المجيد لشرح كتاب التوحيد - مجلد.png" alt="فتح المجيد شرح كتاب التوحيد" />
+        <h3>فتح المجيد شرح كتاب التوحيد</h3>
+        <p>شرح مبسط لأساسيات التوحيد والعقيدة الصحيحة.</p>
+        <p class="price">السعر: 13$ دولار</p>
+        <button class="buy-btn">اشتري الآن</button>
+      </div>
+      <div class="book-card">
+        <img src="assets/images/رياض.jpg" alt="رياض الصالحين" />
+        <h3>رياض الصالحين</h3>
+        <p>أجمل الأحاديث في الأخلاق والسلوك.</p>
+        <p class="price">السعر: 10$ دولار</p>
+        <button class="buy-btn">اشتري الآن</button>
+      </div>
+      <div class="book-card">
+        <img src="assets/images/كثير.jpeg" alt="تفسير ابن كثير" />
+        <h3>تفسير ابن كثير</h3>
+        <p>من أشهر كتب التفسير بالأثر.</p>
+        <p class="price">السعر: 12$ دولار</p>
+        <button class="buy-btn">اشتري الآن</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section container">
+    <h2>تقييمات ومراجعات الكتب</h2>
+
+    <div class="review-card">
+      <h3>فتح المجيد شرح كتاب التوحيد</h3>
+      <div class="stars">★★★★☆</div>
+      <p>كتاب رائع ومفيد جداً لفهم العقيدة بأسلوب مبسط وواضح. أنصح به للجميع.</p>
+      <span class="reviewer">- عبدالله</span>
+    </div>
+
+    <div class="review-card">
+      <h3>رياض الصالحين</h3>
+      <div class="stars">★★★★★</div>
+      <p>أحاديث مختارة بعناية تساعد على تحسين الأخلاق والسلوك. من أفضل الكتب التي قرأتها.</p>
+      <span class="reviewer">- فاطمة</span>
+    </div>
+
+    <div class="review-card">
+      <h3>تفسير ابن كثير</h3>
+      <div class="stars">★★★★☆</div>
+      <p>شرح تفصيلي ومعتمد لتفسير القرآن، مناسب للمبتدئين وللمتعمقين في العلم.</p>
+      <span class="reviewer">- محمد</span>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      &copy; 2025 زاد المؤمن. جميع الحقوق محفوظة.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

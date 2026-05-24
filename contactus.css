@@ -1,0 +1,214 @@
+/* الأساسيات */
+:root {
+  --color-primary: #004643;
+  --color-primary-strong: #0b6e4f;
+  --color-accent: #fdd835;
+  --color-accent-strong: #fbc02d;
+  --color-bg: #f2f2f2;
+  --color-text: #222;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  direction: rtl;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+/* الحاوية */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* شريط التنقل */
+.main-nav {
+  background-color: var(--color-primary);
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 10px;
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ✅ الهيدر */
+.main-header {
+  background-color: transparent; /* نخلي الخلفية الشفافة */
+  padding: 0;
+  margin: 0;
+}
+
+.main-header .container {
+  background-color: var(--color-primary); /* خلفية خضرا بس للعناوين */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 5px solid var(--color-accent);
+  border-radius: 0 0 20px 20px;
+}
+
+.main-header h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.main-header p {
+  font-size: 1.4em;
+  color: #f9f9f9;
+}
+
+/* ✅ قسم التواصل */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.contact p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.contact ul li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin: 10px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.contact ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact ul li a {
+  color: var(--color-primary-strong);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact ul li a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* ✅ نموذج التواصل */
+.contact h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.contact-form button {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: 16px 32px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-accent-strong);
+  transform: translateY(-4px);
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}

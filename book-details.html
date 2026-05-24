@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>تفاصيل الكتاب - زاد المؤمن</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/book-details.css" />
+  <script src="assets/js/cache-cleanup.js"></script>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html">الرئيسية</a>
+      <a href="aqeedah.html">كتب العقيدة</a>
+      <a href="fiqh.html">كتب الفقه</a>
+      <a href="hadith.html">كتب الحديث</a>
+      <a href="tafsir.html">كتب التفسير</a>
+      <a href="checkout.html">الدفع</a>
+    </div>
+  </nav>
+
+  <header class="details-hero">
+    <div class="container details-hero-inner">
+      <div>
+        <p class="kicker">مكتبة زاد المؤمن</p>
+        <h1 id="bookTitle">تفاصيل الكتاب</h1>
+        <p id="bookSubtitle" class="subtitle">معلومات موثقة ومختصرة عن الكتاب</p>
+      </div>
+      <a id="categoryLink" class="back-link" href="index.html">العودة للقسم</a>
+    </div>
+  </header>
+
+  <main class="container details-grid">
+    <section class="book-cover-card">
+      <img id="bookImage" src="assets/images/png.png" alt="غلاف الكتاب" />
+      <button id="addToCartBtn" class="buy-btn" type="button">أضف إلى السلة</button>
+      <p id="bookPrice" class="price-tag"></p>
+    </section>
+
+    <section class="book-meta-card">
+      <div class="meta-row"><span>المؤلف</span><strong id="bookAuthor"></strong></div>
+      <div class="meta-row"><span>التصنيف</span><strong id="bookCategory"></strong></div>
+      <div class="meta-row"><span>الفترة</span><strong id="bookEra"></strong></div>
+      <div class="meta-row"><span>الوصف المختصر</span><p id="bookDescription"></p></div>
+
+      <h2>أبرز المحاور</h2>
+      <ul id="bookHighlights"></ul>
+
+      <h2>مرجع معلومات</h2>
+      <p>
+        تم إعداد هذه البطاقة اعتمادا على مصادر تعريفية منشورة.
+        <a id="bookSource" href="#" target="_blank" rel="noopener">عرض المرجع</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="assets/js/book-details.js"></script>
+</body>
+</html>
