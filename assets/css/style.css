@@ -52,7 +52,7 @@ main {
 }
 
 .container {
-  width: 90%; /* عرض بنسبة 90% من الشاشة */
+  width: min(100% - 2rem, 1200px); /* عرض مرن مع هوامش جانبية على الشاشات الصغيرة */
   max-width: 1200px; /* أقصى عرض هو 1200 بكسل */
   margin: auto; /* توسيط العنصر أفقياً */
 }
@@ -71,6 +71,7 @@ main {
 .main-nav .container {
   display: flex; /* استخدام Flexbox */
   justify-content: center; /* توسيط العناصر */
+  align-items: center;
   flex-wrap: wrap; /* السماح بانتقال العناصر لسطر جديد */
   gap: 20px; /* مسافة بين الروابط */
 }
@@ -219,11 +220,14 @@ main {
 }
 
 @media (max-width: 768px) {
-  .main-nav {
+  .main-nav .container {
     flex-direction: column; /* تغيير الترتيب لعمودي */
+    align-items: stretch;
+    gap: 10px;
   }
   .main-nav a {
-    margin: 10px 0; /* مسافة بين الروابط */
+    width: 100%;
+    margin: 0; /* مسافة بين الروابط */
   }
 }
 
@@ -578,15 +582,16 @@ main {
 
 @media (max-width: 480px) {
   .container {
-    width: 94%;
+    width: min(100% - 1rem, 1200px);
   }
 
   .home .main-nav {
-    height: 100px;
+    height: auto;
+    padding: 12px 0;
   }
 
   .main-nav a {
-    width: calc(50% - 8px);
+    width: 100%;
   }
 
   .books-list {
@@ -757,6 +762,7 @@ html {
   width: 90%;               /* الفيديو بعرض 90% من الحاوية */
   max-width: 900px;         /* أقصى عرض */
   height: auto;             /* يحافظ على نسبة العرض للارتفاع */
+  display: block;
   border-radius: 12px;      /* حواف مدورة */
   box-shadow: var(--shadow-md); /* ظل خفيف */
   transition: transform 0.3s ease; /* لتحريك خفيف عند التفاعل */
